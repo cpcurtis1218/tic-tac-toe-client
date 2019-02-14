@@ -14,136 +14,152 @@ $(() => {
 
   $('#index-0').on('click', function () {
     // using currentTurn, determine if next click is blue (x) or red(o)
-    if (currentTurn % 2 === 0) {
+    if (currentTurn % 2 === 0 && currentGame[0] === '') {
     // turn background red
       $(this).css('background-color', 'red')
       // assign currentGame[0] value 'o'
       currentGame[0] = 'o'
       // if next click is 'x'
-    } else {
+      currentTurn++
+    } else if (currentGame[0] === '') {
       // turn background blue
       $(this).css('background-color', 'blue')
       // assign currentGame[0] value 'x'
       currentGame[0] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', events.alreadyClicked())
     }
-    // increment currentTurn variable
-    currentTurn++
     // log currentTurn
     console.log('current turn is ', currentTurn)
-    // disable event handler for this div
-    $(this).off()
     // run win condition
     console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-1').on('click', function () {
-    if (currentTurn % 2 === 0) {
+    if (currentTurn % 2 === 0 && currentGame[1] === '') {
       $(this).css('background-color', 'red')
       currentGame[1] = 'o'
-    } else {
+      currentTurn++
+    } else if (currentGame[1] === '') {
       $(this).css('background-color', 'blue')
       currentGame[1] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', events.alreadyClicked())
     }
-    currentTurn++
     console.log('current turn is ', currentTurn)
-    $(this).off()
     // run win condition
     console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-2').on('click', function () {
-    if (currentTurn % 2 === 0) {
+    if (currentTurn % 2 === 0 && currentGame[2] === '') {
       $(this).css('background-color', 'red')
       currentGame[2] = 'o'
-    } else {
+      currentTurn++
+    } else if (currentGame[2] === '') {
       $(this).css('background-color', 'blue')
       currentGame[2] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', events.alreadyClicked())
     }
-    currentTurn++
     console.log('current turn is ', currentTurn)
-    $(this).off()
     // run win condition
     console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-3').on('click', function () {
-    if (currentTurn % 2 === 0) {
+    if (currentTurn % 2 === 0 && currentGame[3] === '') {
       $(this).css('background-color', 'red')
       currentGame[3] = 'o'
-    } else {
+      currentTurn++
+    } else if (currentGame[3] === '') {
       $(this).css('background-color', 'blue')
       currentGame[3] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', events.alreadyClicked())
     }
-    currentTurn++
     console.log('current turn is ', currentTurn)
-    $(this).off()
     // run win condition
     console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-4').on('click', function () {
-    if (currentTurn % 2 === 0) {
+    if (currentTurn % 2 === 0 && currentGame[4] === '') {
       $(this).css('background-color', 'red')
       currentGame[4] = 'o'
-    } else {
+      currentTurn++
+    } else if (currentGame[4] === '') {
       $(this).css('background-color', 'blue')
       currentGame[4] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', events.alreadyClicked())
     }
-    currentTurn++
     console.log('current turn is ', currentTurn)
-    $(this).off()
     // run win condition
     console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-5').on('click', function () {
-    if (currentTurn % 2 === 0) {
+    if (currentTurn % 2 === 0 && currentGame[5] === '') {
       $(this).css('background-color', 'red')
       currentGame[5] = 'o'
-    } else {
+      currentTurn++
+    } else if (currentGame[5] === '') {
       $(this).css('background-color', 'blue')
       currentGame[5] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', events.alreadyClicked())
     }
-    currentTurn++
     console.log('current turn is ', currentTurn)
-    $(this).off()
     // run win condition
     console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-6').on('click', function () {
-    if (currentTurn % 2 === 0) {
+    if (currentTurn % 2 === 0 && currentGame[6] === '') {
       $(this).css('background-color', 'red')
       currentGame[6] = 'o'
-    } else {
+      currentTurn++
+    } else if (currentGame[6] === '') {
       $(this).css('background-color', 'blue')
       currentGame[6] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', events.alreadyClicked())
     }
-    currentTurn++
     console.log('current turn is ', currentTurn)
-    $(this).off()
     // run win condition
     console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-7').on('click', function () {
-    if (currentTurn % 2 === 0) {
+    if (currentTurn % 2 === 0 && currentGame[7] === '') {
       $(this).css('background-color', 'red')
       currentGame[7] = 'o'
-    } else {
+      currentTurn++
+    } else if (currentGame[7] === '') {
       $(this).css('background-color', 'blue')
       currentGame[7] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', events.alreadyClicked())
     }
-    currentTurn++
     console.log('current turn is ', currentTurn)
-    $(this).off()
     // run win condition
     console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-8').on('click', function () {
-    if (currentTurn % 2 === 0) {
+    if (currentTurn % 2 === 0 && currentGame[8] === '') {
       $(this).css('background-color', 'red')
       currentGame[8] = 'o'
-    } else {
+      currentTurn++
+    } else if (currentGame[8] === '') {
       $(this).css('background-color', 'blue')
       currentGame[8] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', events.alreadyClicked())
     }
-    currentTurn++
     console.log('current turn is ', currentTurn)
-    $(this).off()
     // run win condition
     console.log(events.checkGameOver(currentTurn, currentGame))
   })

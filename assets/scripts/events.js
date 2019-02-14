@@ -2,6 +2,10 @@
 
 const ui = require('./ui.js')
 
+const alreadyClicked = function () {
+  $('.user-message').html('').html('Invalid Move')
+}
+
 const resetBoard = function (turn, gameArray) {
   gameArray = ['', '', '', '', '', '', '', '', '']
   turn = 1
@@ -51,5 +55,6 @@ const checkGameOver = function (turn, gameArray) {
 
 module.exports = {
   checkGameOver,
-  resetBoard
+  resetBoard,
+  alreadyClicked
 }
