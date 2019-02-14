@@ -30,6 +30,7 @@ span {
 
 .game {
   border: 1px solid black;
+  height: 20vh;
 }
 
 .game:hover {
@@ -45,7 +46,7 @@ span {
   border: 1px solid black;
   float: right;
   height: 40vh;
-  margin-right: 8vw;
+  margin-right: 6vw;
   width: 20vh;
 
   .o {
@@ -57,10 +58,18 @@ span {
   border: 1px solid black;
   float: left;
   height: 40vh;
-  margin-left: 8vw;
+  margin-left: 6vw;
   width: 20vh;
 
   .x {
     color: blue;
   }
+}
+
+.user-alerts {
+  font-weight: bold;
+  height: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 50vw;
 }
