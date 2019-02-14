@@ -1,7 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
 
+aside {
+  margin-top: 12vh;
+  text-align: center;
+  font-size: 2rem;
+}
+
 div {
-  border: 1px solid black;
   height: 100%;
   text-align: center;
 }
@@ -19,8 +24,8 @@ header {
   width: 100%;
 }
 
-.game-board {
-  border: 0;
+.game {
+  border: 1px solid black;
 }
 
 .game:hover {
@@ -30,4 +35,28 @@ header {
 .main {
   height: 25vh;
   width: 400px;
+}
+
+.player-o {
+  border: 1px solid black;
+  float: right;
+  height: 40vh;
+  margin-right: 8vw;
+  width: 20vh;
+
+  .o {
+    color: red;
+  }
+}
+
+.player-x {
+  border: 1px solid black;
+  float: left;
+  height: 40vh;
+  margin-left: 8vw;
+  width: 20vh;
+
+  .x {
+    color: blue;
+  }
 }
