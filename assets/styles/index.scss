@@ -1,1 +1,33 @@
 @import '~bootstrap/scss/bootstrap';
+
+div {
+  border: 1px solid black;
+  height: 100%;
+  text-align: center;
+}
+
+footer {
+  height: 50px;
+  margin: 0 auto;
+  width: 90vw;
+}
+
+header {
+  height: 75px;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+}
+
+.game-board {
+  border: 0;
+}
+
+.game:hover {
+  background: grey;
+}
+
+.main {
+  height: 25vh;
+  width: 45vw;
+}
