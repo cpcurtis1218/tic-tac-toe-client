@@ -2,14 +2,14 @@
 
 const ui = require('./ui.js')
 
-const disableGame = function () {
-  $('.game').off()
-}
-
 const resetBoard = function (turn, gameArray) {
   gameArray = ['', '', '', '', '', '', '', '', '']
   turn = 1
   $('.game').css('background-color', 'white')
+}
+
+const disableGame = function () {
+  $('.game').off()
 }
 
 const checkGameOver = function (turn, gameArray) {
