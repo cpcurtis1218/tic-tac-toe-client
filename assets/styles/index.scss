@@ -1,9 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
 aside {
+  font-size: 2rem;
   margin-top: 12vh;
   text-align: center;
-  font-size: 2rem;
 }
 
 div {
@@ -31,10 +31,10 @@ span {
 .game {
   border: 1px solid black;
   height: 20vh;
-}
 
-.game:hover {
-  background: grey;
+  &:hover {
+    background: grey;
+  }
 }
 
 .main {
