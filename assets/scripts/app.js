@@ -28,13 +28,12 @@ $(() => {
     }
     // increment currentTurn variable
     currentTurn++
-    // log currentGame array
-    console.log('current game is ', currentGame)
+    // log currentTurn
     console.log('current turn is ', currentTurn)
     // disable event handler for this div
     $(this).off()
     // run win condition
-    console.log(events.checkGameOver(currentGame))
+    console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-1').on('click', function () {
     if (currentTurn % 2 === 0) {
@@ -45,11 +44,10 @@ $(() => {
       currentGame[1] = 'x'
     }
     currentTurn++
-    console.log('current game is ', currentGame)
     console.log('current turn is ', currentTurn)
     $(this).off()
     // run win condition
-    console.log(events.checkGameOver(currentGame))
+    console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-2').on('click', function () {
     if (currentTurn % 2 === 0) {
@@ -60,11 +58,10 @@ $(() => {
       currentGame[2] = 'x'
     }
     currentTurn++
-    console.log('current game is ', currentGame)
     console.log('current turn is ', currentTurn)
     $(this).off()
     // run win condition
-    console.log(events.checkGameOver(currentGame))
+    console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-3').on('click', function () {
     if (currentTurn % 2 === 0) {
@@ -75,11 +72,10 @@ $(() => {
       currentGame[3] = 'x'
     }
     currentTurn++
-    console.log('current game is ', currentGame)
     console.log('current turn is ', currentTurn)
     $(this).off()
     // run win condition
-    console.log(events.checkGameOver(currentGame))
+    console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-4').on('click', function () {
     if (currentTurn % 2 === 0) {
@@ -90,11 +86,10 @@ $(() => {
       currentGame[4] = 'x'
     }
     currentTurn++
-    console.log('current game is ', currentGame)
     console.log('current turn is ', currentTurn)
     $(this).off()
     // run win condition
-    console.log(events.checkGameOver(currentGame))
+    console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-5').on('click', function () {
     if (currentTurn % 2 === 0) {
@@ -105,11 +100,10 @@ $(() => {
       currentGame[5] = 'x'
     }
     currentTurn++
-    console.log('current game is ', currentGame)
     console.log('current turn is ', currentTurn)
     $(this).off()
     // run win condition
-    console.log(events.checkGameOver(currentGame))
+    console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-6').on('click', function () {
     if (currentTurn % 2 === 0) {
@@ -120,11 +114,10 @@ $(() => {
       currentGame[6] = 'x'
     }
     currentTurn++
-    console.log('current game is ', currentGame)
     console.log('current turn is ', currentTurn)
     $(this).off()
     // run win condition
-    console.log(events.checkGameOver(currentGame))
+    console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-7').on('click', function () {
     if (currentTurn % 2 === 0) {
@@ -135,11 +128,10 @@ $(() => {
       currentGame[7] = 'x'
     }
     currentTurn++
-    console.log('current game is ', currentGame)
     console.log('current turn is ', currentTurn)
     $(this).off()
     // run win condition
-    console.log(events.checkGameOver(currentGame))
+    console.log(events.checkGameOver(currentTurn, currentGame))
   })
   $('#index-8').on('click', function () {
     if (currentTurn % 2 === 0) {
@@ -150,10 +142,9 @@ $(() => {
       currentGame[8] = 'x'
     }
     currentTurn++
-    console.log('current game is ', currentGame)
     console.log('current turn is ', currentTurn)
     $(this).off()
     // run win condition
-    console.log(events.checkGameOver(currentGame))
+    console.log(events.checkGameOver(currentTurn, currentGame))
   })
 })
