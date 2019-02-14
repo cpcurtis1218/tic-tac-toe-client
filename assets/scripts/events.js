@@ -54,6 +54,10 @@ const checkGameOver = function (turn, gameArray) {
     $('.user-message').html('player ' + gameArray[2] + ' is the winner!')
     disableGame()
     ui.playAgain()
+  } else if (turn === 10) {
+    $('.user-message').html(`It's a draw!`)
+    disableGame()
+    ui.playAgain()
   }
 }
 
