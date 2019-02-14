@@ -14,7 +14,6 @@ const resetBoard = function (turn, gameArray) {
   gameArray = ['', '', '', '', '', '', '', '', '']
   turn = 1
   $('.game').css('background-color', 'white')
-  $('.game').on()
 }
 
 const disableGame = function () {
