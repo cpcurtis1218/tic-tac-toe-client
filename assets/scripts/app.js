@@ -147,4 +147,6 @@ $(() => {
     // run win condition
     console.log(events.checkGameOver(currentTurn, currentGame))
   })
+
+  $('.play-again-button').on('click', events.resetBoard)
 })
