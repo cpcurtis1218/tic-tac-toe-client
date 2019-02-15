@@ -9,6 +9,8 @@
 const events = require('./events.js')
 
 $(() => {
+  $('#sign-up-form').on('submit', events.onSignUp)
+
   let currentTurn = 1
   const currentGame = ['', '', '', '', '', '', '', '', '']
 

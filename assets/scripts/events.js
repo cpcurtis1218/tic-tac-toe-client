@@ -1,13 +1,24 @@
 'use strict'
 
+const api = require('./api.js')
 const ui = require('./ui.js')
+const getFormFields = require('../../lib/get-form-fields.js')
+
+const onSignUp = function (event) {
+  event.preventDefault()
+  const form = event.target
+  console.log('form:', form)
+  const formData = getFormFields(form)
+  console.log('formData', formData)
+
+  api.signUp(formData)
+    .then(ui.signUpSuccess)
+    .catch(ui.signUpFailure)
+}
 
 const alreadyClicked = function () {
   $('.user-message').html('').html('Invalid Move')
-
-  setTimeout(function () {
-    $('.user-message').html('')
-  }, 2000)
+  ui.resetUserMessage()
 }
 
 const resetBoard = function (turn, gameArray) {
@@ -61,6 +72,7 @@ const checkGameOver = function (turn, gameArray) {
 }
 
 module.exports = {
+  onSignUp,
   checkGameOver,
   resetBoard,
   alreadyClicked
