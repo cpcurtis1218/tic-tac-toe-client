@@ -12,6 +12,7 @@ div {
 }
 
 footer {
+  border: 1px solid black;
   height: 50px;
   margin: 0 auto;
   width: 90vw;
@@ -26,6 +27,10 @@ header {
 
 span {
   font-weight: bold;
+}
+
+.activate:hover {
+  background-color: grey;
 }
 
 .game {
