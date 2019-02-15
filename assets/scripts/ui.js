@@ -19,6 +19,11 @@ const signInSuccess = function (responseData) {
   resetUserMessage()
 }
 
+const changePasswordSuccess = function () {
+  $('.user-message').html('Password Change Successful!').css('color', 'green').css('font-weight', 'bold').css('font-size', '1.5rem')
+  resetUserMessage()
+}
+
 const failure = function () {
   $('.user-message').html('Something went wrong').css('color', 'red').css('font-weight', 'bold')
   resetUserMessage()
@@ -32,6 +37,7 @@ module.exports = {
   resetUserMessage,
   signUpSuccess,
   signInSuccess,
+  changePasswordSuccess,
   failure,
   playAgain
 }

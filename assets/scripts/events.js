@@ -16,7 +16,7 @@ const onSignUp = function (event) {
     .catch(ui.failure)
 }
 
-const onSignIn = (event) => {
+const onSignIn = function (event) {
   event.preventDefault()
   const form = event.target
   console.log('form:', form)
@@ -25,6 +25,18 @@ const onSignIn = (event) => {
 
   api.signIn(formData)
     .then(ui.signInSuccess)
+    .catch(ui.failure)
+}
+
+const onChangePassword = function (event) {
+  event.preventDefault()
+  const form = event.target
+  console.log('form:', form)
+  const formData = getFormFields(form)
+  console.log('formData', formData)
+
+  api.changePassword(formData)
+    .then(ui.changePasswordSuccess)
     .catch(ui.failure)
 }
 
@@ -86,6 +98,7 @@ const checkGameOver = function (turn, gameArray) {
 module.exports = {
   onSignUp,
   onSignIn,
+  onChangePassword,
   checkGameOver,
   resetBoard,
   alreadyClicked
