@@ -17,6 +17,7 @@ const signUpSuccess = function () {
 const signInSuccess = function (responseData) {
   $('.user-message').html('Sign In Successful!').css('color', 'green').css('font-weight', 'bold')
   $('.auth-form').trigger('reset')
+  $('footer').show()
   store.user = responseData.user
   resetUserMessage()
 }
@@ -30,6 +31,7 @@ const changePasswordSuccess = function () {
 const signOutSuccess = function () {
   $('.user-message').html('Sign Out Successful!').css('color', 'green').css('font-weight', 'bold')
   $('.auth-form').trigger('reset')
+  $('footer').show()
   store.user = null
   resetUserMessage()
 }
