@@ -26,6 +26,7 @@ const changePasswordSuccess = function () {
 
 const signOutSuccess = function () {
   $('.user-message').html('Sign Out Successful!').css('color', 'green').css('font-weight', 'bold')
+  store.user = null
   resetUserMessage()
 }
 
