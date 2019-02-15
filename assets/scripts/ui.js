@@ -34,6 +34,13 @@ const signOutSuccess = function () {
   resetUserMessage()
 }
 
+const createGameSuccess = function (responseData) {
+  $('.user-message').html('New Game Created!')
+  store.game = responseData.game
+  console.log(store.game)
+  resetUserMessage()
+}
+
 const failure = function () {
   $('.user-message').html('Something went wrong').css('color', 'red').css('font-weight', 'bold')
   $('.auth-form').trigger('reset')
@@ -46,5 +53,6 @@ module.exports = {
   signInSuccess,
   changePasswordSuccess,
   signOutSuccess,
+  createGameSuccess,
   failure
 }

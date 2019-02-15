@@ -52,6 +52,8 @@ const onCreateGame = event => {
   console.log('game created!')
 
   api.createGame()
+    .then(ui.createGameSuccess)
+    .catch(ui.failure)
 }
 
 const alreadyClicked = function () {
@@ -59,11 +61,11 @@ const alreadyClicked = function () {
   ui.resetUserMessage()
 }
 
-const resetBoard = function (turn, gameArray) {
-  gameArray = ['', '', '', '', '', '', '', '', '']
-  turn = 1
-  $('.game').css('background-color', 'white')
-}
+// const resetBoard = function (turn, gameArray) {
+//   gameArray = ['', '', '', '', '', '', '', '', '']
+//   turn = 1
+//   $('.game').css('background-color', 'white')
+// }
 
 const disableGame = function () {
   $('.game').off()
@@ -240,6 +242,5 @@ module.exports = {
   onCreateGame,
   alreadyClicked,
   checkGameOver,
-  resetBoard,
   playGame
 }
