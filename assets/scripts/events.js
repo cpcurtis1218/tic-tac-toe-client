@@ -4,7 +4,7 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const getFormFields = require('../../lib/get-form-fields.js')
 
-const onSignUp = (event) => {
+const onSignUp = event => {
   event.preventDefault()
   const form = event.target
   console.log('form:', form)
@@ -16,7 +16,7 @@ const onSignUp = (event) => {
     .catch(ui.failure)
 }
 
-const onSignIn = (event) => {
+const onSignIn = event => {
   event.preventDefault()
   const form = event.target
   console.log('form:', form)
@@ -28,7 +28,7 @@ const onSignIn = (event) => {
     .catch(ui.failure)
 }
 
-const onChangePassword = (event) => {
+const onChangePassword = event => {
   event.preventDefault()
   const form = event.target
   console.log('form:', form)
@@ -40,12 +40,18 @@ const onChangePassword = (event) => {
     .catch(ui.failure)
 }
 
-const onSignOut = (event) => {
+const onSignOut = event => {
   event.preventDefault()
 
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.failure)
+}
+
+const createGame = event => {
+  console.log('game created!')
+
+  api.createGame()
 }
 
 const alreadyClicked = function () {
@@ -231,8 +237,9 @@ module.exports = {
   onSignIn,
   onChangePassword,
   onSignOut,
+  createGame,
+  alreadyClicked,
   checkGameOver,
   resetBoard,
-  alreadyClicked,
   playGame
 }
