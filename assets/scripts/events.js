@@ -13,7 +13,19 @@ const onSignUp = function (event) {
 
   api.signUp(formData)
     .then(ui.signUpSuccess)
-    .catch(ui.signUpFailure)
+    .catch(ui.failure)
+}
+
+const onSignIn = (event) => {
+  event.preventDefault()
+  const form = event.target
+  console.log('form:', form)
+  const formData = getFormFields(form)
+  console.log('formData', formData)
+
+  api.signIn(formData)
+    .then(ui.signInSuccess)
+    .catch(ui.failure)
 }
 
 const alreadyClicked = function () {
@@ -73,6 +85,7 @@ const checkGameOver = function (turn, gameArray) {
 
 module.exports = {
   onSignUp,
+  onSignIn,
   checkGameOver,
   resetBoard,
   alreadyClicked
