@@ -18,7 +18,7 @@ footer {
 }
 
 header {
-  height: 75px;
+  height: 100px;
   justify-content: center;
   margin: 0;
   width: 100%;
@@ -45,9 +45,7 @@ span {
 .player-o {
   border: 1px solid black;
   float: right;
-  height: 40vh;
   margin-right: 6vw;
-  width: 20vh;
 
   .o {
     color: red;
@@ -57,13 +55,16 @@ span {
 .player-x {
   border: 1px solid black;
   float: left;
-  height: 40vh;
   margin-left: 6vw;
-  width: 20vh;
 
   .x {
     color: blue;
   }
+}
+
+.title,
+.user {
+  border: 1px solid black;
 }
 
 .user-message {
