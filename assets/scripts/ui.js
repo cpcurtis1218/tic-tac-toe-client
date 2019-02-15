@@ -51,6 +51,14 @@ const createGameSuccess = function (responseData) {
   resetUserMessage()
 }
 
+const signUpInFailure = function () {
+  $('.user-message').html('Something went wrong').css('color', 'red').css('font-weight', 'bold')
+  $('.auth-form').trigger('reset')
+  setTimeout(function () {
+    $('.user-message').html('Sign Up or Sign In to Play!').css('color', 'black')
+  }, 4000)
+}
+
 const failure = function () {
   $('.user-message').html('Something went wrong').css('color', 'red').css('font-weight', 'bold')
   $('.auth-form').trigger('reset')
@@ -64,5 +72,6 @@ module.exports = {
   changePasswordSuccess,
   signOutSuccess,
   createGameSuccess,
+  signUpInFailure,
   failure
 }
