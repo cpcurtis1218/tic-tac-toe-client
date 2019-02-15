@@ -9,12 +9,12 @@ const resetUserMessage = function () {
 }
 
 const signUpSuccess = function () {
-  $('.user-message').html('Sign Up Successful!')
+  $('.user-message').html('Sign Up Successful!').css('color', 'green').css('font-weight', 'bold')
   resetUserMessage()
 }
 
 const signInSuccess = function (responseData) {
-  $('.user-message').html('Sign In Successful!')
+  $('.user-message').html('Sign In Successful!').css('color', 'green').css('font-weight', 'bold')
   store.user = responseData.user
   resetUserMessage()
 }
