@@ -40,6 +40,14 @@ const onChangePassword = function (event) {
     .catch(ui.failure)
 }
 
+const onSignOut = (event) => {
+  event.preventDefault()
+
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.failure)
+}
+
 const alreadyClicked = function () {
   $('.user-message').html('').html('Invalid Move')
   ui.resetUserMessage()
@@ -99,6 +107,7 @@ module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
+  onSignOut,
   checkGameOver,
   resetBoard,
   alreadyClicked
