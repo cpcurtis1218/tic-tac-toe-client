@@ -103,6 +103,7 @@ const checkGameOver = function (turn, gameArray) {
 }
 
 const playGame = function () {
+  $('.game').css('background-color', 'white').addClass('game')
   let currentTurn = 1
   const currentGame = ['', '', '', '', '', '', '', '', '']
 
