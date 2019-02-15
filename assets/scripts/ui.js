@@ -40,16 +40,11 @@ const failure = function () {
   resetUserMessage()
 }
 
-const playAgain = function () {
-
-}
-
 module.exports = {
   resetUserMessage,
   signUpSuccess,
   signInSuccess,
   changePasswordSuccess,
   signOutSuccess,
-  failure,
-  playAgain
+  failure
 }

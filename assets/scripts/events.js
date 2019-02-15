@@ -103,6 +103,138 @@ const checkGameOver = function (turn, gameArray) {
   }
 }
 
+const playGame = function () {
+  let currentTurn = 1
+  const currentGame = ['', '', '', '', '', '', '', '', '']
+
+  $('#index-0').on('click', function () {
+    if (currentTurn % 2 === 0 && currentGame[0] === '') {
+      $(this).css('background-color', 'red')
+      currentGame[0] = 'o'
+      currentTurn++
+    } else if (currentGame[0] === '') {
+      $(this).css('background-color', 'blue')
+      currentGame[0] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', alreadyClicked())
+    }
+    checkGameOver(currentTurn, currentGame)
+  })
+  $('#index-1').on('click', function () {
+    if (currentTurn % 2 === 0 && currentGame[1] === '') {
+      $(this).css('background-color', 'red')
+      currentGame[1] = 'o'
+      currentTurn++
+    } else if (currentGame[1] === '') {
+      $(this).css('background-color', 'blue')
+      currentGame[1] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', alreadyClicked())
+    }
+    checkGameOver(currentTurn, currentGame)
+  })
+  $('#index-2').on('click', function () {
+    if (currentTurn % 2 === 0 && currentGame[2] === '') {
+      $(this).css('background-color', 'red')
+      currentGame[2] = 'o'
+      currentTurn++
+    } else if (currentGame[2] === '') {
+      $(this).css('background-color', 'blue')
+      currentGame[2] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', alreadyClicked())
+    }
+    checkGameOver(currentTurn, currentGame)
+  })
+  $('#index-3').on('click', function () {
+    if (currentTurn % 2 === 0 && currentGame[3] === '') {
+      $(this).css('background-color', 'red')
+      currentGame[3] = 'o'
+      currentTurn++
+    } else if (currentGame[3] === '') {
+      $(this).css('background-color', 'blue')
+      currentGame[3] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', alreadyClicked())
+    }
+    checkGameOver(currentTurn, currentGame)
+  })
+  $('#index-4').on('click', function () {
+    if (currentTurn % 2 === 0 && currentGame[4] === '') {
+      $(this).css('background-color', 'red')
+      currentGame[4] = 'o'
+      currentTurn++
+    } else if (currentGame[4] === '') {
+      $(this).css('background-color', 'blue')
+      currentGame[4] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', alreadyClicked())
+    }
+    checkGameOver(currentTurn, currentGame)
+  })
+  $('#index-5').on('click', function () {
+    if (currentTurn % 2 === 0 && currentGame[5] === '') {
+      $(this).css('background-color', 'red')
+      currentGame[5] = 'o'
+      currentTurn++
+    } else if (currentGame[5] === '') {
+      $(this).css('background-color', 'blue')
+      currentGame[5] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', alreadyClicked())
+    }
+    checkGameOver(currentTurn, currentGame)
+  })
+  $('#index-6').on('click', function () {
+    if (currentTurn % 2 === 0 && currentGame[6] === '') {
+      $(this).css('background-color', 'red')
+      currentGame[6] = 'o'
+      currentTurn++
+    } else if (currentGame[6] === '') {
+      $(this).css('background-color', 'blue')
+      currentGame[6] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', alreadyClicked())
+    }
+    checkGameOver(currentTurn, currentGame)
+  })
+  $('#index-7').on('click', function () {
+    if (currentTurn % 2 === 0 && currentGame[7] === '') {
+      $(this).css('background-color', 'red')
+      currentGame[7] = 'o'
+      currentTurn++
+    } else if (currentGame[7] === '') {
+      $(this).css('background-color', 'blue')
+      currentGame[7] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', alreadyClicked())
+    }
+    checkGameOver(currentTurn, currentGame)
+  })
+  $('#index-8').on('click', function () {
+    if (currentTurn % 2 === 0 && currentGame[8] === '') {
+      $(this).css('background-color', 'red')
+      currentGame[8] = 'o'
+      currentTurn++
+    } else if (currentGame[8] === '') {
+      $(this).css('background-color', 'blue')
+      currentGame[8] = 'x'
+      currentTurn++
+    } else {
+      $(this).on('click', alreadyClicked())
+    }
+    checkGameOver(currentTurn, currentGame)
+  })
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -110,5 +242,6 @@ module.exports = {
   onSignOut,
   checkGameOver,
   resetBoard,
-  alreadyClicked
+  alreadyClicked,
+  playGame
 }
