@@ -40,7 +40,7 @@ const signOutSuccess = function () {
   $('#sign-out').hide()
   $('#sign-in-form').show()
   $('#sign-up-form').show()
-  $('.game').off().css('background-color', 'white')
+  $('.game').removeClass('skier').removeClass('snowboarder').addclass('blank')
   store.user = null
   resetUserMessage()
 }
