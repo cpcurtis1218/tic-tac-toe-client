@@ -61,12 +61,6 @@ const alreadyClicked = function () {
   ui.resetUserMessage()
 }
 
-// const resetBoard = function (turn, gameArray) {
-//   gameArray = ['', '', '', '', '', '', '', '', '']
-//   turn = 1
-//   $('.game').css('background-color', 'white')
-// }
-
 const disableGame = function () {
   $('.game').off()
 }

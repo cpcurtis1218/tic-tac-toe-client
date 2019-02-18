@@ -5,7 +5,7 @@ const store = require('./store.js')
 const resetUserMessage = function () {
   setTimeout(function () {
     $('.user-message').html('')
-  }, 4000)
+  }, 2000)
 }
 
 const signUpSuccess = function () {
@@ -40,7 +40,7 @@ const signOutSuccess = function () {
   $('#sign-out').hide()
   $('#sign-in-form').show()
   $('#sign-up-form').show()
-  $('.game').removeClass('skier').removeClass('snowboarder').addclass('blank')
+  $('.game').addClass('blank').removeClass('skier').removeClass('snowboarder').off()
   store.user = null
   resetUserMessage()
 }
@@ -57,7 +57,7 @@ const signUpInFailure = function () {
   $('.auth-form').trigger('reset')
   setTimeout(function () {
     $('.user-message').html('Sign Up or Sign In to Play!').css('color', 'black')
-  }, 4000)
+  }, 2000)
 }
 
 const failure = function () {
