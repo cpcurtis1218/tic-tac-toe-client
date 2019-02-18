@@ -9,13 +9,13 @@ const resetUserMessage = function () {
 }
 
 const signUpSuccess = function () {
-  $('.user-message').html('Sign Up Successful!').css('color', 'green').css('font-weight', 'bold')
+  $('.user-message').html('Sign Up Successful!').removeClass('message-failure').addClass('message-success')
   $('.auth-form').trigger('reset')
   resetUserMessage()
 }
 
 const signInSuccess = function (responseData) {
-  $('.user-message').html('Sign In Successful!').css('color', 'green').css('font-weight', 'bold')
+  $('.user-message').html('Sign In Successful!').removeClass('message-failure').addClass('message-success')
   $('.auth-form').trigger('reset')
   $('footer').show()
   $('#change-password-form').show()
@@ -27,13 +27,12 @@ const signInSuccess = function (responseData) {
 }
 
 const changePasswordSuccess = function () {
-  $('.user-message').html('Password Change Successful!').css('color', 'green').css('font-weight', 'bold').css('font-size', '1.5rem')
-  $('.auth-form').trigger('reset')
+  $('.user-message').html('Password Change Successful!').removeClass('message-failure').addClass('message-success')
   resetUserMessage()
 }
 
 const signOutSuccess = function () {
-  $('.user-message').html('Sign Out Successful!').css('color', 'green').css('font-weight', 'bold')
+  $('.user-message').html('Sign Out Successful!').removeClass('message-failure').addClass('message-success')
   $('.auth-form').trigger('reset')
   $('footer').hide()
   $('#change-password-form').hide()
@@ -46,22 +45,22 @@ const signOutSuccess = function () {
 }
 
 const createGameSuccess = function (responseData) {
-  $('.user-message').html('New Game Created!')
+  $('.user-message').html('New Game Created!').removeClass('message-failure').addClass('message-success')
   store.game = responseData.game
   console.log(store.game)
   resetUserMessage()
 }
 
 const signUpInFailure = function () {
-  $('.user-message').html('Something went wrong').css('color', 'red').css('font-weight', 'bold')
+  $('.user-message').html('Something went wrong').removeClass('message-success').addClass('message-failure')
   $('.auth-form').trigger('reset')
   setTimeout(function () {
-    $('.user-message').html('Sign Up or Sign In to Play!').css('color', 'black')
+    $('.user-message').html('Sign Up or Sign In to Play!')
   }, 2000)
 }
 
 const failure = function () {
-  $('.user-message').html('Something went wrong').css('color', 'red').css('font-weight', 'bold')
+  $('.user-message').html('Something went wrong').removeClass('message-success').addClass('message-failure')
   $('.auth-form').trigger('reset')
   resetUserMessage()
 }

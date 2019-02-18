@@ -57,7 +57,7 @@ const onCreateGame = event => {
 }
 
 const alreadyClicked = function () {
-  $('.user-message').html('').html('Invalid Move')
+  $('.user-message').html('Invalid Move').removeClass('message-success').addClass('message-failure')
   ui.resetUserMessage()
 }
 
@@ -114,6 +114,8 @@ const playGame = function () {
       $(this).on('click', alreadyClicked())
     }
     checkGameOver(currentTurn, currentGame)
+    console.log(currentGame)
+    console.log(currentTurn)
   })
   $('#index-1').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[1] === '') {

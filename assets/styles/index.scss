@@ -56,6 +56,15 @@ span {
   width: 30vw;
 }
 
+.message-failure {
+  color: red;
+  font-weight: bold;
+}
+
+.message-success {
+  color: green;
+}
+
 .player-o {
   border: 1px solid black;
   float: right;
