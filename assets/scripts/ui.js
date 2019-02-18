@@ -8,6 +8,14 @@ const resetUserMessage = function () {
   }, 2000)
 }
 
+const startMessage = function () {
+  $('.user-message').html('Sign Up or Sign In to Play!').removeClass('message-failure').removeClass('message-success')
+}
+
+const playMessage = function () {
+  $('.user-message').html(`Click 'Play Game' to Begin!`).removeClass('message-failure').addClass('message-success')
+}
+
 const signUpSuccess = function () {
   $('.user-message').html('Sign Up Successful!').removeClass('message-failure').addClass('message-success')
   $('.auth-form').trigger('reset')
@@ -23,7 +31,7 @@ const signInSuccess = function (responseData) {
   $('#sign-in-form').hide()
   $('#sign-up-form').hide()
   store.user = responseData.user
-  resetUserMessage()
+  setTimeout(playMessage, 2000)
 }
 
 const changePasswordSuccess = function () {
@@ -40,8 +48,8 @@ const signOutSuccess = function () {
   $('#sign-in-form').show()
   $('#sign-up-form').show()
   $('.game').addClass('blank').removeClass('skier').removeClass('snowboarder').off()
+  setTimeout(startMessage, 2000)
   store.user = null
-  resetUserMessage()
 }
 
 const createGameSuccess = function (responseData) {
@@ -54,9 +62,7 @@ const createGameSuccess = function (responseData) {
 const signUpInFailure = function () {
   $('.user-message').html('Something went wrong').removeClass('message-success').addClass('message-failure')
   $('.auth-form').trigger('reset')
-  setTimeout(function () {
-    $('.user-message').html('Sign Up or Sign In to Play!')
-  }, 2000)
+  setTimeout(startMessage, 2000)
 }
 
 const failure = function () {
