@@ -88,3 +88,27 @@ span {
   margin: 10px auto;
   text-align: center;
 }
+
+@media (min-width: 575px) {
+  .main {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .main {
+    max-width: 35%;
+  }
+}
+
+// @media (min-width: 1200px) {
+//   .main {
+//     max-width: 30%;
+//   }
+// }
