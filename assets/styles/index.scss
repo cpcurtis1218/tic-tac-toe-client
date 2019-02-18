@@ -44,17 +44,16 @@ span {
 }
 
 .game {
-  padding: 0px;
+  height: 0;
+  padding-bottom: 25%;
+  width: 25%;
 }
 
 .game-board {
-  justify-content: space-around;
 }
 
 .main {
-  height: 20vh;
-  padding: 0px;
-  width: 30vw;
+  max-width: 75%;
 }
 
 .message-failure {
@@ -65,34 +64,16 @@ span {
   color: green;
 }
 
-.player-o {
-  border: 1px solid black;
-  float: right;
-  margin-right: 6vw;
-
-  .o {
-    color: red;
-  }
-}
-
-.player-x {
-  border: 1px solid black;
-  float: left;
-  margin-left: 6vw;
-
-  .x {
-    color: blue;
-  }
-}
-
 .skier {
   background-image: url('../../public/skier.png');
   background-size: cover;
+  border: 1px solid black;
 }
 
 .snowboarder {
   background-image: url('../../public/snowboarder.png');
   background-size: cover;
+  border: 1px solid black;
 }
 
 .title,
@@ -101,10 +82,9 @@ span {
 }
 
 .user-message {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   height: 2rem;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
-  width: 50vw;
 }
