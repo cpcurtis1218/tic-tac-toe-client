@@ -97,6 +97,7 @@ const checkGameOver = function (turn, gameArray) {
 }
 
 const playGame = function () {
+  disableGame()
   $('.game').addClass('blank').removeClass('skier').removeClass('snowboarder')
   let currentTurn = 1
   const currentGame = ['', '', '', '', '', '', '', '', '']
@@ -106,7 +107,7 @@ const playGame = function () {
       $(this).addClass('snowboarder').removeClass('blank')
       currentGame[0] = 'o'
       currentTurn++
-    } else if (currentGame[0] === '') {
+    } else if (currentTurn % 2 === 1 && currentGame[0] === '') {
       $(this).addClass('skier').removeClass('blank')
       currentGame[0] = 'x'
       currentTurn++
@@ -122,7 +123,7 @@ const playGame = function () {
       $(this).addClass('snowboarder').removeClass('blank')
       currentGame[1] = 'o'
       currentTurn++
-    } else if (currentGame[1] === '') {
+    } else if (currentTurn % 2 === 1 && currentGame[1] === '') {
       $(this).addClass('skier').removeClass('blank')
       currentGame[1] = 'x'
       currentTurn++
@@ -136,7 +137,7 @@ const playGame = function () {
       $(this).addClass('snowboarder').removeClass('blank')
       currentGame[2] = 'o'
       currentTurn++
-    } else if (currentGame[2] === '') {
+    } else if (currentTurn % 2 === 1 && currentGame[2] === '') {
       $(this).addClass('skier').removeClass('blank')
       currentGame[2] = 'x'
       currentTurn++
@@ -150,7 +151,7 @@ const playGame = function () {
       $(this).addClass('snowboarder').removeClass('blank')
       currentGame[3] = 'o'
       currentTurn++
-    } else if (currentGame[3] === '') {
+    } else if (currentTurn % 2 === 1 && currentGame[3] === '') {
       $(this).addClass('skier').removeClass('blank')
       currentGame[3] = 'x'
       currentTurn++
@@ -164,7 +165,7 @@ const playGame = function () {
       $(this).addClass('snowboarder').removeClass('blank')
       currentGame[4] = 'o'
       currentTurn++
-    } else if (currentGame[4] === '') {
+    } else if (currentTurn % 2 === 1 && currentGame[4] === '') {
       $(this).addClass('skier').removeClass('blank')
       currentGame[4] = 'x'
       currentTurn++
@@ -178,7 +179,7 @@ const playGame = function () {
       $(this).addClass('snowboarder').removeClass('blank')
       currentGame[5] = 'o'
       currentTurn++
-    } else if (currentGame[5] === '') {
+    } else if (currentTurn % 2 === 1 && currentGame[5] === '') {
       $(this).addClass('skier').removeClass('blank')
       currentGame[5] = 'x'
       currentTurn++
@@ -192,7 +193,7 @@ const playGame = function () {
       $(this).addClass('snowboarder').removeClass('blank')
       currentGame[6] = 'o'
       currentTurn++
-    } else if (currentGame[6] === '') {
+    } else if (currentTurn % 2 === 1 && currentGame[6] === '') {
       $(this).addClass('skier').removeClass('blank')
       currentGame[6] = 'x'
       currentTurn++
@@ -206,7 +207,7 @@ const playGame = function () {
       $(this).addClass('snowboarder').removeClass('blank')
       currentGame[7] = 'o'
       currentTurn++
-    } else if (currentGame[7] === '') {
+    } else if (currentTurn % 2 === 1 && currentGame[7] === '') {
       $(this).addClass('skier').removeClass('blank')
       currentGame[7] = 'x'
       currentTurn++
@@ -220,7 +221,7 @@ const playGame = function () {
       $(this).addClass('snowboarder').removeClass('blank')
       currentGame[8] = 'o'
       currentTurn++
-    } else if (currentGame[8] === '') {
+    } else if (currentTurn % 2 === 1 && currentGame[8] === '') {
       $(this).addClass('skier').removeClass('blank')
       currentGame[8] = 'x'
       currentTurn++
