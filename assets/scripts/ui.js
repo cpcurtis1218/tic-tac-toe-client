@@ -77,6 +77,9 @@ const failure = function () {
 const getGamesSuccess = function (responseData) {
   store.games = responseData.games
   $('.games-message').html(`You've played ${store.games.length} games!`).addClass('message-success')
+  setTimeout(function () {
+    $('.games-message').html('')
+  }, 5000)
 }
 
 const onOSuccess = function (index) {
