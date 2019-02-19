@@ -15,7 +15,8 @@ footer {
   border: 1px solid black;
   height: 50px;
   margin: 0 auto;
-  width: 90vw;
+  justify-content: center;
+  width: 75%;
 }
 
 header {
@@ -29,8 +30,14 @@ span {
   font-weight: bold;
 }
 
-.activate:hover {
+.activate {
+  font-size: 2rem;
+  font-weight: bold;
+  color: blue;
+  height: 100%;
+  &:hover {
   background-color: grey;
+  }
 }
 
 .blank {
@@ -96,7 +103,8 @@ span {
   .user-message {
     margin-top: 10%;
   }
-  .main {
+  .main,
+  footer {
     max-width: 60%;
   }
 }
@@ -105,14 +113,16 @@ span {
   .user-message {
     margin-top: 5%;
   }
-  .main {
+  .main,
+  footer {
     max-width: 50%;
   }
 }
 
 @media (min-width: 992px) {
-  .main {
-    max-width: 35%;
+  .main,
+  footer {
+    max-width: 40%;
   }
 }
 
