@@ -26,6 +26,7 @@ const signInSuccess = function (responseData) {
   $('.user-message').html('Sign In Successful!').removeClass('message-failure').addClass('message-success')
   $('.auth-form').trigger('reset')
   $('footer').show()
+  $('#total-games').show()
   $('#change-password-form').show()
   $('#sign-out').show()
   $('#sign-in-form').hide()
@@ -44,6 +45,8 @@ const signOutSuccess = function () {
   $('.user-message').html('Sign Out Successful!').removeClass('message-failure').addClass('message-success')
   $('.auth-form').trigger('reset')
   $('footer').hide()
+  $('#total-games').hide()
+  $('.games-message').html('')
   $('#change-password-form').hide()
   $('#sign-out').hide()
   $('#sign-in-form').show()
@@ -73,7 +76,7 @@ const failure = function () {
 
 const getGamesSuccess = function (responseData) {
   store.games = responseData.games
-  $('.games-message').html(`You have played ${store.games.length} games!`).addClass('message-success')
+  $('.games-message').html(`You've played ${store.games.length} games!`).addClass('message-success')
 }
 
 const onOSuccess = function (index) {
