@@ -106,10 +106,12 @@ const playGame = function () {
     if (currentTurn % 2 === 0 && currentGame[0] === '') {
       $(this).addClass('snowboarder').removeClass('blank')
       currentGame[0] = 'o'
+      api.reportTurnO(0)
       currentTurn++
     } else if (currentTurn % 2 === 1 && currentGame[0] === '') {
       $(this).addClass('skier').removeClass('blank')
       currentGame[0] = 'x'
+      api.reportTurnX(0)
       currentTurn++
     } else {
       $(this).on('click', alreadyClicked())

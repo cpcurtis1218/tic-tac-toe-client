@@ -51,10 +51,50 @@ const createGame = () => {
   })
 }
 
+const reportTurnO = function (index) {
+  return $.ajax({
+    url: config.apiUrl + 'games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      'game': {
+        'cell': {
+          'index': `${index}`,
+          'value': 'o'
+        },
+        'over': 'false'
+      }
+    }
+  })
+}
+
+const reportTurnX = function (index) {
+  return $.ajax({
+    url: config.apiUrl + 'games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      'game': {
+        'cell': {
+          'index': `${index}`,
+          'value': 'x'
+        },
+        'over': 'false'
+      }
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  createGame
+  createGame,
+  reportTurnO,
+  reportTurnX
 }
