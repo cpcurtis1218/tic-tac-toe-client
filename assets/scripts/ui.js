@@ -71,6 +71,14 @@ const failure = function () {
   resetUserMessage()
 }
 
+const onOSuccess = function (index) {
+  $(index).addClass('snowboarder').removeClass('blank')
+}
+
+const onXSuccess = function (index) {
+  $(index).addClass('skier').removeClass('blank')
+}
+
 module.exports = {
   resetUserMessage,
   signUpSuccess,
@@ -79,5 +87,7 @@ module.exports = {
   signOutSuccess,
   createGameSuccess,
   signUpInFailure,
-  failure
+  failure,
+  onOSuccess,
+  onXSuccess
 }
