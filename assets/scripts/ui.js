@@ -55,7 +55,6 @@ const signOutSuccess = function () {
 const createGameSuccess = function (responseData) {
   $('.user-message').html('New Game Created!').removeClass('message-failure').addClass('message-success')
   store.game = responseData.game
-  console.log(store.game)
   resetUserMessage()
 }
 
