@@ -54,8 +54,10 @@ const signOutSuccess = function () {
 
 const createGameSuccess = function (responseData) {
   $('.user-message').html('New Game Created!').removeClass('message-failure').addClass('message-success')
+  setTimeout(function () {
+    $('.user-message').html('Have Fun!').removeClass('message-failure').addClass('message-success')
+  }, 2000)
   store.game = responseData.game
-  resetUserMessage()
 }
 
 const signUpInFailure = function () {
