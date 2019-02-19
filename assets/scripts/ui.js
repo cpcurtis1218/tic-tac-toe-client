@@ -36,6 +36,7 @@ const signInSuccess = function (responseData) {
 
 const changePasswordSuccess = function () {
   $('.user-message').html('Password Change Successful!').removeClass('message-failure').addClass('message-success')
+  $('.auth-form').trigger('reset')
   resetUserMessage()
 }
 
