@@ -14,8 +14,8 @@ In the future I would like to add a scoreboard which would track the longest win
 
 
 ## Wireframes
-(https://i.imgur.com/ItpHMPI.png)
-(https://i.imgur.com/VI3LkjQ.png)
+- [Mobile View](https://i.imgur.com/ItpHMPI.png)
+- [Desktop View](https://i.imgur.com/VI3LkjQ.png)
 
 
 ## User Stories
