@@ -17,55 +17,64 @@ div {
 }
 
 footer {
-  border: 1px solid black;
+  border: 4px solid white;
+  border-radius: 8px;
   height: 50px;
   margin: 0 auto;
   justify-content: center;
   width: 75%;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+h1 {
+  border: 4px solid white;
+  border-radius: 8px;
 }
 
 header {
   height: 100px;
   justify-content: center;
   margin: 0;
-  width: 100%;
+  width: 50%;
 }
 
-span {
-  font-weight: bold;
+section {
+  color: white;
 }
 
 .activate {
   font-size: 2rem;
   font-weight: bold;
-  color: blue;
+  color: white;
   height: 100%;
-  &:hover {
-  background-color: grey;
-  }
 }
 
 .blank {
-  background-color: white;
-  border: 1px solid black;
+  border: 4px solid white;
 
   &:hover {
-    background: grey;
+    opacity: 0.25;
   }
 }
 
 .dropdown-item {
   border: 1px solid grey;
   border-radius: 4px;
+  margin: 0;
 }
 
 .game {
+  border-radius: 8px;
   height: 0;
   padding-bottom: 25%;
   width: 25%;
 }
 
-.game-board {
+.games-message {
+  color: white;
+  font-size: 1.5rem;
 }
 
 .main {
@@ -83,13 +92,17 @@ span {
 .skier {
   background-image: url('public/skier.png');
   background-size: cover;
-  border: 1px solid black;
+  border: 4px solid white;
 }
 
 .snowboarder {
   background-image: url('public/snowboarder.png');
   background-size: cover;
-  border: 1px solid black;
+  border: 4px solid white;
+}
+
+.title {
+  color: white;
 }
 
 .user-button {
@@ -126,6 +139,9 @@ span {
 }
 
 @media (min-width: 992px) {
+  .user-message {
+    margin-top: 0;
+  }
   .main,
   footer {
     max-width: 40%;

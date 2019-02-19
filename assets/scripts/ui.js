@@ -23,7 +23,7 @@ const signUpSuccess = function () {
 }
 
 const signInSuccess = function (responseData) {
-  $('footer').show()
+  $('footer').show(1000)
   $('.user-message').html('Sign In Successful!').removeClass('message-failure').addClass('message-success')
   $('.auth-form').trigger('reset')
   $('.user-button').show()
@@ -55,7 +55,7 @@ const signOutSuccess = function () {
 const createGameSuccess = function (responseData) {
   $('.user-message').html('New Game Created!').removeClass('message-failure').addClass('message-success')
   setTimeout(function () {
-    $('.user-message').html('Have Fun!').removeClass('message-failure').addClass('message-success')
+    $('.user-message').html('Have Fun!').removeClass('message-failure').removeClass('message-success')
   }, 2000)
   store.game = responseData.game
 }
@@ -74,7 +74,7 @@ const failure = function () {
 
 const getGamesSuccess = function (responseData) {
   store.games = responseData.games
-  $('.games-message').html(`You've played ${store.games.length} games!`).addClass('message-success')
+  $('.games-message').html(`You've played ${store.games.length} games!`)
   setTimeout(function () {
     $('.games-message').html('')
   }, 5000)
