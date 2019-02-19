@@ -15,49 +15,59 @@
       <header class="container">
         <div class="row">
           <div class="col-6 title"><h1>Tic-Tac-Snow</h1></div>
-          <div class="col-6 user">User Info
+          <div class="col-6 user">
             <br>
               <div class="btn-group">
                 <button type="button" class="btn btn-primary dropdown-toggle sign-in-up-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Sign In
                 </button>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu dropdown-menu-right">
                   <form id="sign-in-form" class="auth-form">
-                    <input class="dropdown-item" type="email" name="credentials[email]" placeholder="email">
-                    <input class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
-                    <input class="dropdown-item" type="submit" value="Sign In">
+                    <label for="sign-in-email">Email Address</label>
+                    <input id="sign-in-email" class="dropdown-item" type="email" name="credentials[email]" placeholder="email">
+                    <label for="sign-in-password">Password</label>
+                    <input id="sign-in-password" class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
+                    <button class="btn btn-primary" type="submit" value="Sign In">Sign In</button>
                   </form>
                 </div>
               </div>
               <div class="btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle sign-in-up-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-success dropdown-toggle sign-in-up-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Sign Up
                 </button>
                 <div class="dropdown-menu">
                   <form id="sign-up-form" class="auth-form">
-                    <input class="dropdown-item" name="credentials[email]" type="email" placeholder="email">
-                    <input class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
-                    <input class="dropdown-item" name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
-                    <input class="dropdown-item" type="submit" value="Sign Up">
+                    <label for="sign-up-email">Email Address</label>
+                    <input id="sign-up-email" class="dropdown-item" name="credentials[email]" type="email" placeholder="email">
+                    <label for="sign-up-password">Password</label>
+                    <input id="sign-up-password" class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
+                    <label for="sign-up-password-conf">Confirm Password</label>
+                    <input id="sign-up-password-conf" class="dropdown-item" name="credentials[password_confirmation]" type="password" placeholder="password">
+                    <button class="btn btn-primary" type="submit" value="Sign Up">Sign Up</button>
+                  </form>
+                </div>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle user-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Change Password
+                </button>
+                <div class="dropdown-menu">
+                  <form id="change-password-form" class="auth-form">
+                    <input class="dropdown-item" type="password" name="passwords[old]" placeholder="current password">
+                    <input class="dropdown-item" type="password" name="passwords[new]" placeholder="new password">
+                    <input class="dropdown-item" type="submit" value="Change Password">
                   </form>
                 </div>
               </div>
             <button type="button" name="total-games" id="total-games">Get Games</button>
+              <form id="sign-out" class="user-button">
+                <input type="submit" value="Sign Out">
+              </form>
             <br>
             <div class="games-message"></div>
           </div>
         </div>
       </header>
-
-      <form id="change-password-form" class="auth-form">
-        <input type="password" name="passwords[old]" placeholder="current password">
-        <input type="password" name="passwords[new]" placeholder="new password">
-        <input type="submit" value="Change Password">
-      </form>
-
-      <form id="sign-out">
-        <input type="submit" value="Sign Out">
-      </form>
 
       <section class="user-message">Sign Up or Sign In to Play!</section>
       <div class="main container mt-4">

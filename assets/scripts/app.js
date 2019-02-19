@@ -10,11 +10,12 @@ const events = require('./events.js')
 
 $(() => {
   $('footer').hide()
+  $('.user-button').hide()
   $('#total-games').hide()
   $('#sign-up-form').on('submit', events.onSignUp)
   $('#sign-in-form').on('submit', events.onSignIn)
-  $('#change-password-form').on('submit', events.onChangePassword).hide()
-  $('#sign-out').on('submit', events.onSignOut).hide()
+  $('#change-password-form').on('submit', events.onChangePassword)
+  $('#sign-out').on('submit', events.onSignOut)
 
   $('#activate').on('click', events.playGame).on('click', events.onCreateGame)
   $('#total-games').on('click', events.onGetGames)
