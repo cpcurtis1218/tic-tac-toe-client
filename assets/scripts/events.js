@@ -3,7 +3,6 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
 const getFormFields = require('../../lib/get-form-fields.js')
-const store = require('./store.js')
 
 const onSignUp = event => {
   event.preventDefault()
@@ -70,30 +69,41 @@ const checkGameOver = function (turn, gameArray) {
   if (gameArray[0] !== '' && gameArray[0] === gameArray[1] && gameArray[1] === gameArray[2]) {
     $('.user-message').html('player ' + gameArray[0] + ' is the winner!')
     disableGame()
+    return true
   } else if (gameArray[3] !== '' && gameArray[3] === gameArray[4] && gameArray[4] === gameArray[5]) {
     $('.user-message').html('player ' + gameArray[3] + ' is the winner!')
     disableGame()
+    return true
   } else if (gameArray[6] !== '' && gameArray[6] === gameArray[7] && gameArray[7] === gameArray[8]) {
     $('.user-message').html('player ' + gameArray[6] + ' is the winner!')
     disableGame()
+    return true
   } else if (gameArray[0] !== '' && gameArray[0] === gameArray[3] && gameArray[3] === gameArray[6]) {
     $('.user-message').html('player ' + gameArray[0] + ' is the winner!')
     disableGame()
+    return true
   } else if (gameArray[1] !== '' && gameArray[1] === gameArray[4] && gameArray[4] === gameArray[7]) {
     $('.user-message').html('player ' + gameArray[1] + ' is the winner!')
     disableGame()
+    return true
   } else if (gameArray[2] !== '' && gameArray[2] === gameArray[5] && gameArray[5] === gameArray[8]) {
     $('.user-message').html('player ' + gameArray[2] + ' is the winner!')
     disableGame()
+    return true
   } else if (gameArray[0] !== '' && gameArray[0] === gameArray[4] && gameArray[4] === gameArray[8]) {
     $('.user-message').html('player ' + gameArray[0] + ' is the winner!')
     disableGame()
+    return true
   } else if (gameArray[2] !== '' && gameArray[2] === gameArray[4] && gameArray[4] === gameArray[6]) {
     $('.user-message').html('player ' + gameArray[2] + ' is the winner!')
     disableGame()
+    return true
   } else if (turn === 10) {
     $('.user-message').html(`It's a draw!`)
     disableGame()
+    return true
+  } else {
+    return false
   }
 }
 
@@ -105,44 +115,45 @@ const playGame = function () {
 
   $('#index-0').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[0] === '') {
+      currentTurn++
       ui.onOSuccess(this)
       currentGame[0] = 'o'
-      api.reportTurnO(0)
-      currentTurn++
+      api.reportTurnO(0, checkGameOver(currentTurn, currentGame))
     } else if (currentTurn % 2 === 1 && currentGame[0] === '') {
+      currentTurn++
       ui.onXSuccess(this)
       currentGame[0] = 'x'
-      api.reportTurnX(0)
-      currentTurn++
+      api.reportTurnX(0, checkGameOver(currentTurn, currentGame))
     } else {
       $(this).on('click', alreadyClicked())
     }
-    checkGameOver(currentTurn, currentGame)
-    console.log(store.game.cells)
   })
   $('#index-1').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[1] === '') {
+      currentTurn++
       ui.onOSuccess(this)
       currentGame[1] = 'o'
-      currentTurn++
+      api.reportTurnO(1, checkGameOver(currentTurn, currentGame))
     } else if (currentTurn % 2 === 1 && currentGame[1] === '') {
+      currentTurn++
       ui.onXSuccess(this)
       currentGame[1] = 'x'
-      currentTurn++
+      api.reportTurnX(1, checkGameOver(currentTurn, currentGame))
     } else {
       $(this).on('click', alreadyClicked())
     }
-    checkGameOver(currentTurn, currentGame)
   })
   $('#index-2').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[2] === '') {
+      currentTurn++
       ui.onOSuccess(this)
       currentGame[2] = 'o'
-      currentTurn++
+      api.reportTurnO(2, checkGameOver(currentTurn, currentGame))
     } else if (currentTurn % 2 === 1 && currentGame[2] === '') {
+      currentTurn++
       ui.onXSuccess(this)
       currentGame[2] = 'x'
-      currentTurn++
+      api.reportTurnX(2, checkGameOver(currentTurn, currentGame))
     } else {
       $(this).on('click', alreadyClicked())
     }
@@ -150,13 +161,15 @@ const playGame = function () {
   })
   $('#index-3').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[3] === '') {
+      currentTurn++
       ui.onOSuccess(this)
       currentGame[3] = 'o'
-      currentTurn++
+      api.reportTurnO(3, checkGameOver(currentTurn, currentGame))
     } else if (currentTurn % 2 === 1 && currentGame[3] === '') {
+      currentTurn++
       ui.onXSuccess(this)
       currentGame[3] = 'x'
-      currentTurn++
+      api.reportTurnX(3, checkGameOver(currentTurn, currentGame))
     } else {
       $(this).on('click', alreadyClicked())
     }
@@ -164,13 +177,15 @@ const playGame = function () {
   })
   $('#index-4').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[4] === '') {
+      currentTurn++
       ui.onOSuccess(this)
       currentGame[4] = 'o'
-      currentTurn++
+      api.reportTurnO(4, checkGameOver(currentTurn, currentGame))
     } else if (currentTurn % 2 === 1 && currentGame[4] === '') {
+      currentTurn++
       ui.onXSuccess(this)
       currentGame[4] = 'x'
-      currentTurn++
+      api.reportTurnX(4, checkGameOver(currentTurn, currentGame))
     } else {
       $(this).on('click', alreadyClicked())
     }
@@ -178,13 +193,15 @@ const playGame = function () {
   })
   $('#index-5').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[5] === '') {
+      currentTurn++
       ui.onOSuccess(this)
       currentGame[5] = 'o'
-      currentTurn++
+      api.reportTurnO(5, checkGameOver(currentTurn, currentGame))
     } else if (currentTurn % 2 === 1 && currentGame[5] === '') {
+      currentTurn++
       ui.onXSuccess(this)
       currentGame[5] = 'x'
-      currentTurn++
+      api.reportTurnX(5, checkGameOver(currentTurn, currentGame))
     } else {
       $(this).on('click', alreadyClicked())
     }
@@ -192,13 +209,15 @@ const playGame = function () {
   })
   $('#index-6').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[6] === '') {
+      currentTurn++
       ui.onOSuccess(this)
       currentGame[6] = 'o'
-      currentTurn++
+      api.reportTurnO(6, checkGameOver(currentTurn, currentGame))
     } else if (currentTurn % 2 === 1 && currentGame[6] === '') {
+      currentTurn++
       ui.onXSuccess(this)
       currentGame[6] = 'x'
-      currentTurn++
+      api.reportTurnX(6, checkGameOver(currentTurn, currentGame))
     } else {
       $(this).on('click', alreadyClicked())
     }
@@ -206,13 +225,15 @@ const playGame = function () {
   })
   $('#index-7').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[7] === '') {
+      currentTurn++
       ui.onOSuccess(this)
       currentGame[7] = 'o'
-      currentTurn++
+      api.reportTurnO(7, checkGameOver(currentTurn, currentGame))
     } else if (currentTurn % 2 === 1 && currentGame[7] === '') {
+      currentTurn++
       ui.onXSuccess(this)
       currentGame[7] = 'x'
-      currentTurn++
+      api.reportTurnX(7, checkGameOver(currentTurn, currentGame))
     } else {
       $(this).on('click', alreadyClicked())
     }
@@ -220,13 +241,15 @@ const playGame = function () {
   })
   $('#index-8').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[8] === '') {
+      currentTurn++
       ui.onOSuccess(this)
       currentGame[8] = 'o'
-      currentTurn++
+      api.reportTurnO(8, checkGameOver(currentTurn, currentGame))
     } else if (currentTurn % 2 === 1 && currentGame[8] === '') {
+      currentTurn++
       ui.onXSuccess(this)
       currentGame[8] = 'x'
-      currentTurn++
+      api.reportTurnX(8, checkGameOver(currentTurn, currentGame))
     } else {
       $(this).on('click', alreadyClicked())
     }

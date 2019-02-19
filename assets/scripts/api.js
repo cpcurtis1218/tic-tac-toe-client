@@ -51,7 +51,7 @@ const createGame = () => {
   })
 }
 
-const reportTurnO = function (index) {
+const reportTurnO = function (index, state) {
   return $.ajax({
     url: config.apiUrl + 'games/' + store.game.id,
     method: 'PATCH',
@@ -64,13 +64,13 @@ const reportTurnO = function (index) {
           'index': `${index}`,
           'value': 'o'
         },
-        'over': 'false'
+        'over': `${state}`
       }
     }
   })
 }
 
-const reportTurnX = function (index) {
+const reportTurnX = function (index, state) {
   return $.ajax({
     url: config.apiUrl + 'games/' + store.game.id,
     method: 'PATCH',
@@ -83,7 +83,7 @@ const reportTurnX = function (index) {
           'index': `${index}`,
           'value': 'x'
         },
-        'over': 'false'
+        'over': `${state}`
       }
     }
   })
