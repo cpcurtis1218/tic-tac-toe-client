@@ -16,4 +16,5 @@ $(() => {
   $('#sign-out').on('submit', events.onSignOut).hide()
 
   $('#activate').on('click', events.playGame).on('click', events.onCreateGame)
+  $('#total-games').on('click', events.onGetGames)
 })

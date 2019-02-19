@@ -71,6 +71,11 @@ const failure = function () {
   resetUserMessage()
 }
 
+const getGamesSuccess = function (responseData) {
+  store.games = responseData.games
+  $('.games-message').html(`You have played ${store.games.length} games!`).addClass('message-success')
+}
+
 const onOSuccess = function (index) {
   $(index).addClass('snowboarder').removeClass('blank')
 }
@@ -88,6 +93,7 @@ module.exports = {
   createGameSuccess,
   signUpInFailure,
   failure,
+  getGamesSuccess,
   onOSuccess,
   onXSuccess
 }

@@ -48,6 +48,12 @@ const onCreateGame = event => {
     .catch(ui.failure)
 }
 
+const onGetGames = event => {
+  api.getGames()
+    .then(ui.getGamesSuccess)
+    .catch(ui.failure)
+}
+
 const alreadyClicked = function () {
   $('.user-message').html('Invalid Move').removeClass('message-success').addClass('message-failure')
   ui.resetUserMessage()
@@ -255,6 +261,7 @@ module.exports = {
   onChangePassword,
   onSignOut,
   onCreateGame,
+  onGetGames,
   alreadyClicked,
   checkGameOver,
   playGame
