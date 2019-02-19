@@ -42,6 +42,11 @@ span {
   }
 }
 
+.dropdown-item {
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
 .game {
   height: 0;
   padding-bottom: 25%;
@@ -75,26 +80,31 @@ span {
   border: 1px solid black;
 }
 
-.title,
 .user {
-  border: 1px solid black;
+  justify-content: space-between;
 }
 
 .user-message {
   font-size: 1.5rem;
   font-weight: bold;
   height: 2rem;
-  margin: 10px auto;
+  margin-top: 25%;
   text-align: center;
 }
 
 @media (min-width: 575px) {
+  .user-message {
+    margin-top: 10%;
+  }
   .main {
     max-width: 60%;
   }
 }
 
 @media (min-width: 768px) {
+  .user-message {
+    margin-top: 5%;
+  }
   .main {
     max-width: 50%;
   }

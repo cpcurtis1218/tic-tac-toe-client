@@ -27,7 +27,7 @@
                     <input id="sign-in-email" class="dropdown-item" type="email" name="credentials[email]" placeholder="email">
                     <label for="sign-in-password">Password</label>
                     <input id="sign-in-password" class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
-                    <button class="btn btn-primary" type="submit" value="Sign In">Sign In</button>
+                    <button class="btn btn-primary" type="submit">Sign In</button>
                   </form>
                 </div>
               </div>
@@ -43,27 +43,26 @@
                     <input id="sign-up-password" class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
                     <label for="sign-up-password-conf">Confirm Password</label>
                     <input id="sign-up-password-conf" class="dropdown-item" name="credentials[password_confirmation]" type="password" placeholder="password">
-                    <button class="btn btn-primary" type="submit" value="Sign Up">Sign Up</button>
+                    <button class="btn btn-primary" type="submit">Sign Up</button>
                   </form>
                 </div>
               </div>
               <div class="btn-group">
-                <button type="button" class="btn btn-info dropdown-toggle user-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-primary dropdown-toggle user-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Change Password
                 </button>
                 <div class="dropdown-menu">
                   <form id="change-password-form" class="auth-form">
                     <input class="dropdown-item" type="password" name="passwords[old]" placeholder="current password">
                     <input class="dropdown-item" type="password" name="passwords[new]" placeholder="new password">
-                    <input class="dropdown-item" type="submit" value="Change Password">
+                    <button class="btn btn-primary" type="submit">Change Password</button>
                   </form>
                 </div>
               </div>
-            <button type="button" name="total-games" id="total-games">Get Games</button>
+            <button class="btn btn-info" type="button" name="total-games" id="total-games">Get Games</button>
               <form id="sign-out" class="user-button">
-                <input type="submit" value="Sign Out">
+                <button class="btn btn-danger" type="submit">Sign Out</button>
               </form>
-            <br>
             <div class="games-message"></div>
           </div>
         </div>
