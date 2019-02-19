@@ -29,8 +29,7 @@ const signInSuccess = function (responseData) {
   $('#total-games').show()
   $('#change-password-form').show()
   $('#sign-out').show()
-  $('#sign-in-form').hide()
-  $('#sign-up-form').hide()
+  $('.sign-in-up-button').hide()
   store.user = responseData.user
   setTimeout(playMessage, 2000)
 }
@@ -49,8 +48,7 @@ const signOutSuccess = function () {
   $('.games-message').html('')
   $('#change-password-form').hide()
   $('#sign-out').hide()
-  $('#sign-in-form').show()
-  $('#sign-up-form').show()
+  $('.sign-in-up-button').show()
   $('.game').addClass('blank').removeClass('skier').removeClass('snowboarder').off()
   setTimeout(startMessage, 2000)
   store.user = null

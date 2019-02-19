@@ -17,25 +17,37 @@
           <div class="col-6 title"><h1>Tic-Tac-Snow</h1></div>
           <div class="col-6 user">User Info
             <br>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle sign-in-up-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Sign In
+                </button>
+                <div class="dropdown-menu">
+                  <form id="sign-in-form" class="auth-form">
+                    <input class="dropdown-item" type="email" name="credentials[email]" placeholder="email">
+                    <input class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
+                    <input class="dropdown-item" type="submit" value="Sign In">
+                  </form>
+                </div>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle sign-in-up-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Sign Up
+                </button>
+                <div class="dropdown-menu">
+                  <form id="sign-up-form" class="auth-form">
+                    <input class="dropdown-item" name="credentials[email]" type="email" placeholder="email">
+                    <input class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
+                    <input class="dropdown-item" name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
+                    <input class="dropdown-item" type="submit" value="Sign Up">
+                  </form>
+                </div>
+              </div>
             <button type="button" name="total-games" id="total-games">Get Games</button>
             <br>
             <div class="games-message"></div>
           </div>
         </div>
       </header>
-
-      <form id="sign-up-form" class="auth-form">
-        <input name="credentials[email]" type="email" placeholder="email">
-        <input name="credentials[password]" type="password" placeholder="password">
-        <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
-        <input type="submit" value="Sign Up">
-      </form>
-
-      <form id="sign-in-form" class="auth-form">
-        <input type="email" name="credentials[email]" placeholder="email">
-        <input name="credentials[password]" type="password" placeholder="password">
-        <input type="submit" value="Sign In">
-      </form>
 
       <form id="change-password-form" class="auth-form">
         <input type="password" name="passwords[old]" placeholder="current password">
