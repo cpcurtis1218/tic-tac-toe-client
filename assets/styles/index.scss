@@ -119,7 +119,7 @@ section {
 }
 
 .user-message {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   height: 2rem;
   margin-top: 25%;
@@ -184,6 +184,7 @@ section {
 
 @media (min-width: 575px) {
   .user-message {
+    font-size: 1.5rem;
     margin-top: 10%;
   }
 
