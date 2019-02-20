@@ -13,7 +13,7 @@ const startMessage = function () {
 }
 
 const playMessage = function () {
-  $('.user-message').html(`Click 'Play Game' to Begin!`).removeClass('message-failure').addClass('message-success')
+  $('.user-message').html(`Click 'New Game' to Begin!`).removeClass('message-failure').addClass('message-success')
 }
 
 const signUpSuccess = function () {
@@ -23,7 +23,7 @@ const signUpSuccess = function () {
 }
 
 const signInSuccess = function (responseData) {
-  $('footer').show(1000)
+  $('footer').slideDown(250)
   $('.user-message').html('Sign In Successful!').removeClass('message-failure').addClass('message-success')
   $('.auth-form').trigger('reset')
   $('.user-button').show()
@@ -42,7 +42,7 @@ const changePasswordSuccess = function () {
 const signOutSuccess = function () {
   $('.user-message').html('Sign Out Successful!').removeClass('message-failure').addClass('message-success')
   $('.auth-form').trigger('reset')
-  $('footer').hide()
+  $('footer').slideUp(250)
   $('#total-games').hide()
   $('.games-message').html('')
   $('.user-button').hide()
