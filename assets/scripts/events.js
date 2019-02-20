@@ -187,7 +187,6 @@ const playGame = function () {
     } else {
       $(this).on('click', alreadyClicked())
     }
-    checkGameOver(currentTurn, currentGame)
   })
   $('#index-3').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[3] === '') {
@@ -203,7 +202,6 @@ const playGame = function () {
     } else {
       $(this).on('click', alreadyClicked())
     }
-    checkGameOver(currentTurn, currentGame)
   })
   $('#index-4').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[4] === '') {
@@ -219,7 +217,6 @@ const playGame = function () {
     } else {
       $(this).on('click', alreadyClicked())
     }
-    checkGameOver(currentTurn, currentGame)
   })
   $('#index-5').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[5] === '') {
@@ -235,7 +232,6 @@ const playGame = function () {
     } else {
       $(this).on('click', alreadyClicked())
     }
-    checkGameOver(currentTurn, currentGame)
   })
   $('#index-6').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[6] === '') {
@@ -251,7 +247,6 @@ const playGame = function () {
     } else {
       $(this).on('click', alreadyClicked())
     }
-    checkGameOver(currentTurn, currentGame)
   })
   $('#index-7').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[7] === '') {
@@ -267,7 +262,6 @@ const playGame = function () {
     } else {
       $(this).on('click', alreadyClicked())
     }
-    checkGameOver(currentTurn, currentGame)
   })
   $('#index-8').on('click', function () {
     if (currentTurn % 2 === 0 && currentGame[8] === '') {
@@ -283,7 +277,6 @@ const playGame = function () {
     } else {
       $(this).on('click', alreadyClicked())
     }
-    checkGameOver(currentTurn, currentGame)
   })
 }
 
