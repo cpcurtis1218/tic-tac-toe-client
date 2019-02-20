@@ -1,10 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
-
-aside {
-  font-size: 2rem;
-  margin-top: 12vh;
-  text-align: center;
-}
+$clear-grey: rgba(0, 0, 0, .5);
+$off-white: rgba(234, 235, 237, 1);
+$failure-red: rgba(219, 60, 39, 1);
+$success-green: rgba(15, 127, 0, 1);
+$sky-blue: rgba(0, 157, 255, .5);
 
 body {
   background: url('public/mountain-background-nice.jpg');
@@ -12,24 +11,25 @@ body {
 }
 
 div {
+  color: #000000;
   text-align: center;
-  color: black;
 }
 
 footer {
-  border: 4px solid white;
+  background-color: $clear-grey;
+  border: 4px solid $off-white;
   border-radius: 8px;
   height: 50px;
   margin: 0 auto;
-  justify-content: center;
   width: 75%;
+
   &:hover {
     opacity: 0.5;
   }
 }
 
 h1 {
-  border: 4px solid white;
+  border: 4px solid $off-white;
   border-radius: 8px;
 }
 
@@ -40,19 +40,23 @@ header {
   width: 50%;
 }
 
+label {
+  margin: 8px 0 0 0;
+}
+
 section {
-  color: white;
+  color: $off-white;
 }
 
 .activate {
   font-size: 2rem;
   font-weight: bold;
-  color: white;
+  color: $off-white;
   height: 100%;
 }
 
 .blank {
-  border: 4px solid white;
+  border: 4px solid $off-white;
 
   &:hover {
     opacity: 0.25;
@@ -60,9 +64,14 @@ section {
 }
 
 .dropdown-item {
-  border: 1px solid grey;
+  border: 1px solid $clear-grey;
   border-radius: 4px;
   margin: 0;
+}
+
+.dropdown-menu {
+  padding: 10%;
+  width: 20vw;
 }
 
 .game {
@@ -73,7 +82,7 @@ section {
 }
 
 .games-message {
-  color: white;
+  color: $off-white;
   font-size: 1.5rem;
 }
 
@@ -82,27 +91,27 @@ section {
 }
 
 .message-failure {
-  color: red;
+  color: $failure-red;
 }
 
 .message-success {
-  color: green;
+  color: $success-green;
 }
 
 .skier {
-  background-image: url('public/skier.png');
+  background-image: url("public/skier.png");
   background-size: cover;
-  border: 4px solid white;
+  border: 4px solid $off-white;
 }
 
 .snowboarder {
-  background-image: url('public/snowboarder.png');
+  background-image: url("public/snowboarder.png");
   background-size: cover;
-  border: 4px solid white;
+  border: 4px solid $off-white;
 }
 
 .title {
-  color: white;
+  color: $off-white;
 }
 
 .user-button {
@@ -117,37 +126,36 @@ section {
   margin-top: 25%;
   text-align: center;
 }
-
 @media (min-width: 575px) {
   .user-message {
     margin-top: 10%;
   }
+
   .main,
   footer {
     max-width: 60%;
   }
 }
-
 @media (min-width: 768px) {
   .user-message {
     margin-top: 5%;
   }
+
   .main,
   footer {
     max-width: 50%;
   }
 }
-
 @media (min-width: 992px) {
   .user-message {
     margin-top: 0;
   }
+
   .main,
   footer {
     max-width: 40%;
   }
 }
-
 // @media (min-width: 1200px) {
 //   .main {
 //     max-width: 30%;
