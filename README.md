@@ -9,6 +9,10 @@ In creating this application I used a combination of html, scss, javascript, boo
 When first planning my game I created two wireframes (see below) and about a dozen user stories.  Once I had a solid Idea for what I wanted the game to look like, I created the game board itself in html.  I looked at the API documentation when setting up my gameboard so that I could be sure that it would work later on.  Once I had a good html outline I wrote the game-logic that makes the game playable.  Again, I looked at the API documentation so that once I was ready to send each move to the API it would be a smooth transition.  Once the game logic was completed I worked on all of the API authenticaion.  Once the authentication was completed I focused on the game API interaction.  Once this was completed, I styled the site and added the finishing touches.
 
 
+## Current Issues
+One issue is that the 'New Game' button get partially cutoff on screens between 530px to 575px, if the height is not also at least 725px.  I'm working on updating the media query so that the button will shrink at this range.
+
+
 ## Future Additions
 In the future I would like to add a scoreboard which would track the longest win streak.
 
