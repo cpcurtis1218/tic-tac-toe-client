@@ -63,6 +63,12 @@ const disableGame = function () {
   $('.game').off()
 }
 
+const playAgain = function () {
+  $('.game').on('click', function () {
+    $('.user-message').html('Game Over - Click `New Game` To Play Again!').removeClass('message-success').addClass('message-failure')
+  })
+}
+
 const checkGameOver = function (turn, gameArray) {
   if (gameArray[0] !== '' && gameArray[0] === gameArray[1] && gameArray[1] === gameArray[2]) {
     if (gameArray[0] === 'x') {
@@ -71,6 +77,7 @@ const checkGameOver = function (turn, gameArray) {
       $('.user-message').html('Snowboarders Win!').addClass('message-success').removeClass('message-failure')
     }
     disableGame()
+    playAgain()
     return true
   } else if (gameArray[3] !== '' && gameArray[3] === gameArray[4] && gameArray[4] === gameArray[5]) {
     if (gameArray[3] === 'x') {
@@ -79,6 +86,7 @@ const checkGameOver = function (turn, gameArray) {
       $('.user-message').html('Snowboarders Win!').addClass('message-success').removeClass('message-failure')
     }
     disableGame()
+    playAgain()
     return true
   } else if (gameArray[6] !== '' && gameArray[6] === gameArray[7] && gameArray[7] === gameArray[8]) {
     if (gameArray[6] === 'x') {
@@ -87,6 +95,7 @@ const checkGameOver = function (turn, gameArray) {
       $('.user-message').html('Snowboarders Win!').addClass('message-success').removeClass('message-failure')
     }
     disableGame()
+    playAgain()
     return true
   } else if (gameArray[0] !== '' && gameArray[0] === gameArray[3] && gameArray[3] === gameArray[6]) {
     if (gameArray[0] === 'x') {
@@ -95,6 +104,7 @@ const checkGameOver = function (turn, gameArray) {
       $('.user-message').html('Snowboarders Win!').addClass('message-success').removeClass('message-failure')
     }
     disableGame()
+    playAgain()
     return true
   } else if (gameArray[1] !== '' && gameArray[1] === gameArray[4] && gameArray[4] === gameArray[7]) {
     if (gameArray[1] === 'x') {
@@ -103,6 +113,7 @@ const checkGameOver = function (turn, gameArray) {
       $('.user-message').html('Snowboarders Win!').addClass('message-success').removeClass('message-failure')
     }
     disableGame()
+    playAgain()
     return true
   } else if (gameArray[2] !== '' && gameArray[2] === gameArray[5] && gameArray[5] === gameArray[8]) {
     if (gameArray[2] === 'x') {
@@ -111,6 +122,7 @@ const checkGameOver = function (turn, gameArray) {
       $('.user-message').html('Snowboarders Win!').addClass('message-success').removeClass('message-failure')
     }
     disableGame()
+    playAgain()
     return true
   } else if (gameArray[0] !== '' && gameArray[0] === gameArray[4] && gameArray[4] === gameArray[8]) {
     if (gameArray[0] === 'x') {
@@ -119,6 +131,7 @@ const checkGameOver = function (turn, gameArray) {
       $('.user-message').html('Snowboarders Win!').addClass('message-success').removeClass('message-failure')
     }
     disableGame()
+    playAgain()
     return true
   } else if (gameArray[2] !== '' && gameArray[2] === gameArray[4] && gameArray[4] === gameArray[6]) {
     if (gameArray[2] === 'x') {
@@ -127,10 +140,12 @@ const checkGameOver = function (turn, gameArray) {
       $('.user-message').html('Snowboarders Win!').addClass('message-success').removeClass('message-failure')
     }
     disableGame()
+    playAgain()
     return true
   } else if (turn === 10) {
     $('.user-message').html(`It's a draw!`).addClass('message-success').removeClass('message-failure')
     disableGame()
+    playAgain()
     return true
   } else {
     return false

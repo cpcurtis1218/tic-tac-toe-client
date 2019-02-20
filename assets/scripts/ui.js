@@ -90,6 +90,8 @@ const onXSuccess = function (index) {
 
 module.exports = {
   resetUserMessage,
+  startMessage,
+  playMessage,
   signUpSuccess,
   signInSuccess,
   changePasswordSuccess,
