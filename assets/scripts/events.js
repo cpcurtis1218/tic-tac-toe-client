@@ -31,7 +31,7 @@ const onChangePassword = event => {
 
   api.changePassword(formData)
     .then(ui.changePasswordSuccess)
-    .catch(ui.failure)
+    .catch(ui.changePasswordFailure)
 }
 
 const onSignOut = event => {
@@ -51,7 +51,7 @@ const onCreateGame = event => {
 const onGetGames = event => {
   api.getGames()
     .then(ui.getGamesSuccess)
-    .catch(ui.failure)
+    .catch(ui.getGamesFailure)
 }
 
 const alreadyClicked = function () {

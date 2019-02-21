@@ -8,6 +8,12 @@ const resetUserMessage = function () {
   }, 2000)
 }
 
+const resetGamesMessage = function () {
+  setTimeout(function () {
+    $('.games-message').html('')
+  }, 2000)
+}
+
 const startMessage = function () {
   $('.user-message').html('Sign Up or Sign In to Play!').removeClass('message-failure').removeClass('message-success')
 }
@@ -35,9 +41,15 @@ const signInSuccess = function (responseData) {
 }
 
 const changePasswordSuccess = function () {
-  $('.user-message').html('Password Change Successful!').removeClass('message-failure').addClass('message-success')
+  $('.games-message').html('Password Change Successful!').removeClass('message-failure').addClass('message-success')
   $('.auth-form').trigger('reset')
-  resetUserMessage()
+  resetGamesMessage()
+}
+
+const changePasswordFailure = function () {
+  $('.games-message').html('Something went wrong').removeClass('message-success').addClass('message-failure')
+  $('.auth-form').trigger('reset')
+  resetGamesMessage()
 }
 
 const signOutSuccess = function () {
@@ -75,10 +87,16 @@ const failure = function () {
 
 const getGamesSuccess = function (responseData) {
   store.games = responseData.games
-  $('.games-message').html(`You've played ${store.games.length} games!`)
+  $('.games-message').html(`You've played ${store.games.length} games!`).removeClass('message-failure').removeClass('message-success')
   setTimeout(function () {
     $('.games-message').html('')
   }, 5000)
+}
+
+const getGamesFailure = function () {
+  $('.games-message').html('Something went wrong').removeClass('message-success').addClass('message-failure')
+  $('.auth-form').trigger('reset')
+  resetGamesMessage()
 }
 
 const onOSuccess = function (index) {
@@ -91,16 +109,19 @@ const onXSuccess = function (index) {
 
 module.exports = {
   resetUserMessage,
+  resetGamesMessage,
   startMessage,
   playMessage,
   signUpSuccess,
   signInSuccess,
   changePasswordSuccess,
+  changePasswordFailure,
   signOutSuccess,
   createGameSuccess,
   signUpInFailure,
   failure,
   getGamesSuccess,
+  getGamesFailure,
   onOSuccess,
   onXSuccess
 }
