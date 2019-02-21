@@ -66,6 +66,7 @@ const disableGame = function () {
 const playAgain = function () {
   $('.game').on('click', function () {
     $('.user-message').html('Game Over - Click `New Game` To Play Again!').removeClass('message-success').addClass('message-failure')
+    ui.resetUserMessage()
   })
 }
 
