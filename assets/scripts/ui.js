@@ -33,7 +33,10 @@ const signInSuccess = function (responseData) {
   $('.user-message').html('Sign In Successful!').removeClass('message-failure').addClass('message-success')
   $('.auth-form').trigger('reset')
   $('.user-button').show()
-  $('.sign-in-up-button').hide()
+  $('.sign-in-button').hide()
+  $('.sign-up-button').hide()
+  $('.sign-in-dd').hide()
+  $('.sign-up-dd').hide()
   $('#total-games').show()
   $('.games-message').show().html('')
   store.user = responseData.user
@@ -59,7 +62,8 @@ const signOutSuccess = function () {
   $('#total-games').hide()
   $('.games-message').hide().html('')
   $('.user-button').hide()
-  $('.sign-in-up-button').show()
+  $('.sign-in-button').show()
+  $('.sign-up-button').show()
   $('.game').addClass('blank').removeClass('skier').removeClass('snowboarder').off()
   setTimeout(startMessage, 2000)
   store.user = null
