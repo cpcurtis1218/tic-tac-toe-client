@@ -19,4 +19,7 @@ $(() => {
 
   $('#activate').on('click', events.playGame).on('click', events.onCreateGame)
   $('#total-games').on('click', events.onGetGames)
+  $('.sign-in-dd-button').on('click', function () {
+    $('.sign-in-dd').hide()
+  })
 })

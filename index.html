@@ -17,25 +17,25 @@
           <div class="col-xs-6 col-sm-6 title"><h1>Tic-Tac-Snow</h1></div>
           <div class="col-xs-6 col-sm-6 user">
             <br>
-              <div class="btn-group">
+              <div class="btn-group dropdown">
                 <button type="button" class="btn btn-primary dropdown-toggle sign-in-up-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Sign In
                 </button>
-                <div class="dropdown-menu dropdown-menu-right">
+                <div class="sign-in-dd dropdown-menu dropdown-menu-right">
                   <form id="sign-in-form" class="auth-form">
                     <label for="sign-in-email">Email Address</label>
                     <input id="sign-in-email" class="dropdown-item" type="email" name="credentials[email]" placeholder="email">
                     <label for="sign-in-password">Password</label>
                     <input id="sign-in-password" class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
-                    <button class="btn btn-primary" type="submit">Sign In</button>
+                    <button class="btn btn-primary sign-in-dd-button" type="submit">Sign In</button>
                   </form>
                 </div>
               </div>
-              <div class="btn-group">
+              <div class="btn-group dropdown">
                 <button type="button" class="btn btn-success dropdown-toggle sign-in-up-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Sign Up
                 </button>
-                <div class="dropdown-menu">
+                <div class="sign-up-dd dropdown-menu">
                   <form id="sign-up-form" class="auth-form">
                     <label for="sign-up-email">Email Address</label>
                     <input id="sign-up-email" class="dropdown-item" name="credentials[email]" type="email" placeholder="email">
