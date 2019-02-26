@@ -80,6 +80,10 @@ section {
   width: 25%;
 }
 
+.game-board {
+  margin-top: 25%;
+}
+
 .games-message {
   color: $off-white;
   font-size: 1.5rem;
@@ -122,7 +126,7 @@ section {
   font-size: 1rem;
   font-weight: bold;
   height: 2rem;
-  margin-top: 25%;
+  margin-top: -8%;
   text-align: center;
 }
 
@@ -183,6 +187,10 @@ section {
 }
 
 @media (min-width: 575px) {
+  .game-board {
+    margin-top: 0;
+  }
+
   .user-message {
     font-size: 1.5rem;
     margin-top: 10%;
