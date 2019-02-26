@@ -15,7 +15,7 @@ const resetGamesMessage = function () {
 }
 
 const startMessage = function () {
-  $('.user-message').html('Sign Up or Sign In to Play!').removeClass('message-failure').removeClass('message-success')
+  $('.user-message').html('Sign Up or Sign In to Play!').removeClass('message-failure').removeClass('message-success').css({ marginRight: 0 })
 }
 
 const playMessage = function () {
@@ -79,6 +79,7 @@ const createGameSuccess = function (responseData) {
 
 const signUpInFailure = function () {
   $('.user-message').html('Something went wrong').removeClass('message-success').addClass('message-failure')
+  $('.user-message').css({ marginRight: '25%' })
   $('.auth-form').trigger('reset')
   setTimeout(startMessage, 2000)
 }
