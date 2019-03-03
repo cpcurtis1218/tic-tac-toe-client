@@ -16,33 +16,33 @@
         <div class="row">
           <div class="col-xs-6 col-sm-6 title"><h1>Tic-Tac-Snow</h1></div>
           <div class="col-xs-6 col-sm-6 user">
-            <br>
+            <!-- <br> -->
               <div class="btn-group dropdown">
-                <button type="button" class="btn btn-primary dropdown-toggle sign-in-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="sign-in-button btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Sign In
                 </button>
                 <div class="sign-in-dd dropdown-menu dropdown-menu-right">
                   <form id="sign-in-form" class="auth-form">
                     <label for="sign-in-email">Email Address</label>
-                    <input id="sign-in-email" class="dropdown-item" type="email" name="credentials[email]" placeholder="email">
+                    <input required id="sign-in-email" class="dropdown-item" type="email" name="credentials[email]" placeholder="email">
                     <label for="sign-in-password">Password</label>
-                    <input id="sign-in-password" class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
+                    <input required id="sign-in-password" class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
                     <button class="btn btn-primary" type="submit">Sign In</button>
                   </form>
                 </div>
               </div>
               <div class="btn-group dropdown">
-                <button type="button" class="btn btn-success dropdown-toggle sign-up-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="sign-up-button btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Sign Up
                 </button>
-                <div class="sign-up-dd dropdown-menu">
+                <div class="sign-up-dd dropdown-menu dropdown-menu-left">
                   <form id="sign-up-form" class="auth-form">
                     <label for="sign-up-email">Email Address</label>
-                    <input id="sign-up-email" class="dropdown-item" name="credentials[email]" type="email" placeholder="email">
+                    <input required id="sign-up-email" class="dropdown-item" name="credentials[email]" type="email" placeholder="email">
                     <label for="sign-up-password">Password</label>
-                    <input id="sign-up-password" class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
+                    <input required id="sign-up-password" class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
                     <label for="sign-up-password-conf">Confirm Password</label>
-                    <input id="sign-up-password-conf" class="dropdown-item" name="credentials[password_confirmation]" type="password" placeholder="password">
+                    <input required id="sign-up-password-conf" class="dropdown-item" name="credentials[password_confirmation]" type="password" placeholder="password">
                     <button class="btn btn-primary" type="submit">Sign Up</button>
                   </form>
                 </div>
