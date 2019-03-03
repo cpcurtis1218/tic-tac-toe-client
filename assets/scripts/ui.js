@@ -35,8 +35,8 @@ const signInSuccess = function (responseData) {
   $('.user-button').show()
   $('.sign-in-button').hide()
   $('.sign-up-button').hide()
-  $('.sign-in-dd').hide()
-  $('.sign-up-dd').hide()
+  $('.sign-in-dd').removeClass('show')
+  $('.sign-up-dd').removeClass('show')
   $('#total-games').show()
   $('.games-message').show().html('')
   store.user = responseData.user
